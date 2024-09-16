@@ -8,17 +8,17 @@ class GuessingGame {
     }
 
     guess() {
-        return this.res = Math.ceil((this.min + this.max) / 2);
+        return this.res = Math.round((this.min + this.max) / 2);
     }
 
     lower() {
-        if (this.min < this.max) {
+        if (this.min <= this.max) {
             this.max = this.res;
         }
     }
 
     greater() {
-        if (this.min < this.max) {
+        if (this.min <= this.max) {
             this.min = this.res;
         }
     }
